@@ -10,33 +10,39 @@
             rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-
-
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
     </head>
 
     <body>
 
         <header class="header">
-            <div class="section-container">
-                <div class="header-container">
-                    <a href="index.html" class="logo">
-                        <img src="img/logo.webp" alt="Logo">
-                    </a>
-                    <nav class="navmenu">
-                        <ul>
-                            <li><a href="index.php" class="active">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <a class="navbar-btn" href="#">Enquire Now</a>
-                </div>
-            </div>
-        </header>
+    <div class="section-container">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.webp" alt="Logo">
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="index.php" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="mobile-only"><a class="navbar-btn" href="#">Enquire Now</a></li>
+                </ul>
+            </nav>
+            
+            <a class="navbar-btn desktop-only" href="#">Enquire Now</a>
+        </div>
+    </div>
+</header>
 
         <section class="hero" id="hero">
             <div class="section-container">
@@ -50,9 +56,9 @@
                     </p>
 
                     <ul>
-                        <li>Complete garden maintenance & care</li>
-                        <li>Lawn mowing, pruning & plant health services</li>
-                        <li>Custom garden design & landscaping</li>
+                        <li><i class="fa-solid fa-fan"></i>Complete garden maintenance & care</li>
+                        <li><i class="fa-solid fa-fan"></i>Lawn mowing, pruning & plant health services</li>
+                        <li><i class="fa-solid fa-fan"></i>Custom garden design & landscaping</li>
                     </ul>
 
                     <a href="#" class="btn">Get a Free Consultation</a>
@@ -207,11 +213,6 @@
         </section>
 
 
-
-
-
-
-
         <div class="blog">
             <div class="section-container">
                         <h2>Latest from Our Blog</h2>
@@ -269,12 +270,6 @@
 
             </div>
         </div>
-
-
-
-
-
-
 
 
         <section class="testimonial-section">
@@ -503,6 +498,24 @@
         </footer>
 
 
+<!-- script for navbar -->
+        <script>
+    const mobileBtn = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.querySelector('.navmenu');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileBtn.classList.toggle('active');
+        navMenu.classList.toggle('open');
+    });
+
+    // Optional: Close menu when a link is clicked
+    document.querySelectorAll('.navmenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileBtn.classList.remove('active');
+            navMenu.classList.remove('open');
+        });
+    });
+</script>
 
         <!-- script for testimonial slider -->
         <script>
@@ -548,10 +561,6 @@
             slider.addEventListener('mouseenter', stopAutoScroll);
             slider.addEventListener('mouseleave', startAutoScroll);
         </script>
-
-
-
-
 
         <!-- script for faq section -->
         <script>
