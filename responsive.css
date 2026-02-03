@@ -6,30 +6,30 @@
     .service-cards {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .service-card:last-child {
-        grid-column: span 1; 
+        grid-column: span 1;
     }
 
 
 
 
     .blog-container {
-        flex-wrap: wrap; /* Allows cards to drop to next line */
+        flex-wrap: wrap;
         gap: 20px;
     }
-    
+
     .blog-card {
-        flex: 0 0 calc(50% - 20px); /* 2 cards per row on tablets */
+        flex: 0 0 calc(50% - 20px);
     }
 
-    
+
     .blog-container {
-        flex-wrap: wrap; /* Allows cards to wrap to a new line */
+        flex-wrap: wrap;
     }
 
     .blog-card {
-        flex: 0 0 calc(50% - 10px); /* 2 cards per row on tablets */
+        flex: 0 0 calc(50% - 10px);
     }
 
 
@@ -37,7 +37,7 @@
 
 
     .faq-container .section-container {
-        gap: 30px; /* Tighten gap for tablets */
+        gap: 30px;
     }
 
     .faq-content h1 {
@@ -50,7 +50,7 @@
 
 
     .footer-top {
-        flex-direction: column; /* Stack logo section above links */
+        flex-direction: column;
         gap: 50px;
     }
 
@@ -60,8 +60,8 @@
     }
 
     .footer-top-left p {
-        margin: 15px auto 0; /* Center the description paragraph */
-        width: 100%; /* Use full width on smaller screens */
+        margin: 15px auto 0;
+        width: 100%;
     }
 
     .footer-top-right {
@@ -85,7 +85,7 @@
     .hero-content {
         width: 80%;
     }
-    
+
     .hero-content h1 {
         font-size: 48px;
     }
@@ -93,47 +93,59 @@
 
 
 
-    .features-card {
-        width: 95%; /* Use more width on tablet */
-        gap: 10px; /* Reduce gap */
-    }
+    /* .features-card {
+        width: 95%;
+        gap: 10px;
+    } */
 
-    .feature-item {
+    /* .feature-item {
         padding: 15px;
-        flex-direction: column; /* Stack Icon on top of text */
-        text-align: center; /* Center align text */
+        flex-direction: column;
+        text-align: center;
         justify-content: center;
+    } */
+
+    .choose-description {
+        width: 100%;
     }
 
-    .feature-text p {
-        text-align: center; /* Center align description */
+    .main-feature-image {
+        height: 600px;
     }
+    .feature-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+
+    /* .feature-text p {
+        text-align: center;
+    } */
 
 
 
 
 
     .projects-content {
-        flex-direction: column; /* Stack Text on top of Gallery */
+        flex-direction: column;
         gap: 40px;
     }
 
     .projects-text {
         width: 100%;
-        text-align: center; /* Center align text for tablet/mobile */
+        text-align: center;
     }
 
     .projects-buttons {
-        justify-content: center; /* Center buttons */
+        justify-content: center;
     }
 
     .social-links {
-        justify-content: center; /* Center social links */
-        gap: 20px; /* Add gap since space-between is removed */
+        justify-content: center;
+        gap: 20px;
     }
 
     .projects-gallery {
-        width: 100%; /* Gallery takes full width */
+        width: 100%;
     }
 
 
@@ -148,6 +160,18 @@
 
 
 
+
+
+
+    /* about page */
+
+    .mv-grid, .detail-flex { grid-template-columns: 1fr; flex-direction: column; }
+    .about-hero h1 { font-size: 2.2rem; }
+    .detail-image { order: 2; }
+    .detail-content { order: 1; }
+
+
+
 }
 
 
@@ -159,9 +183,18 @@
 
 
 @media (max-width: 768px) {
-    .mobile-nav-toggle { display: flex; }
-    .desktop-only { display: none; }
-    .mobile-only { display: block; margin-top: 20px; }
+    .mobile-nav-toggle {
+        display: flex;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 20px;
+    }
 
     .navmenu {
         position: fixed;
@@ -189,9 +222,11 @@
     .mobile-nav-toggle.active .bar:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
+
     .mobile-nav-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
+
     .mobile-nav-toggle.active .bar:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
@@ -229,7 +264,7 @@
         display: inline-block;
         margin-bottom: 30px;
     }
-    
+
     .hero-content ul li {
         font-size: 14px;
         margin-bottom: 8px;
@@ -254,14 +289,14 @@
     .service-main-image {
         order: -1;
     }
-    
+
     .service-main-image img {
         min-height: 250px;
         max-height: 350px;
     }
 
     .service-main-content .btn {
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
     .service-cards {
@@ -278,32 +313,48 @@
 
 
 
+    .promise-items {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+
+    .divider {
+        display: none;
+    }
+    
+    .promise-banner {
+        padding: 30px 0;
+    }
 
 
-    .why-choose-us h2 {
+
+
+
+
+    /* .why-choose-us h2 {
         font-size: 32px;
     }
 
     .main-feature-image {
-        height: 250px; /* Reduce image height */
+        height: 250px;
     }
 
-    /* THE MAJOR CHANGE: Remove absolute positioning */
     .features-card {
-        position: relative; 
+        position: relative;
         bottom: auto;
         left: auto;
         transform: none;
-        flex-direction: column; /* Stack cards vertically */
+        flex-direction: column;
         width: 100%;
-        margin-top: -50px; /* Pull them up to overlap the image slightly */
+        margin-top: -50px;
     }
 
     .feature-item {
-        width: 100%; /* Full width */
-        flex-direction: row; /* Return to Icon-Left layout */
+        width: 100%;
+        flex-direction: row;
         text-align: left;
-        align-items: flex-start; /* Align to top */
+        align-items: flex-start;
     }
 
     .feature-text p {
@@ -311,10 +362,28 @@
     }
 
     .feature-icon {
-        margin-top: 5px; /* Align icon with first line of text */
+        margin-top: 5px;
+    } */
+
+
+    .features-container {
+        padding-bottom: 20px;
     }
-
-
+    .main-feature-image {
+        height: 300px;
+    }
+    .features-card {
+        position: relative;
+        bottom: 0;
+        transform: none;
+        left: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .feature-item {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
 
 
 
@@ -324,31 +393,31 @@
     }
 
     .projects-text h2 {
-        font-size: 2.2rem; /* Smaller font size */
+        font-size: 2.2rem;
     }
 
     .projects-buttons {
-        flex-direction: column; /* Stack buttons on very small screens */
+        flex-direction: column;
         gap: 15px;
         width: 100%;
     }
 
-    .first-btn, .second-btn {
-        width: 100%; /* Full width buttons */
+    .first-btn,
+    .second-btn {
+        width: 100%;
         text-align: center;
     }
 
-    /* Adjust Gallery Heights for Mobile */
     .gallery-item {
-        height: 140px; /* Smaller thumbnails */
+        height: 140px;
     }
 
     .gallery-item:nth-child(3) {
-        height: 220px; /* Smaller main image */
+        height: 220px;
     }
 
     .social-links {
-        flex-direction: column; /* Stack 'Follow us' and Icons */
+        flex-direction: column;
         gap: 10px;
         margin-top: 20px;
     }
@@ -360,30 +429,26 @@
 
 
     .blog {
-        padding: 40px 15px; /* Add side padding for small screens */
+        padding: 40px 15px;
     }
 
     .blog-container {
-        flex-direction: column; /* Stack cards vertically */
+        flex-direction: column;
         align-items: center;
         gap: 30px;
     }
 
     .blog-card {
-        width: 100%; /* Cards take full width of the container */
-        max-width: 450px; /* Prevents them from being too wide on landscape phones */
+        width: 100%;
+        max-width: 450px;
     }
 
-    /* Adjusting Title for Mobile */
     .blog h2 {
         font-size: 32px;
     }
 
-    /* Optional Mobile Touch Fix: 
-       Since there is no hover on mobile, users tap the card.
-       The :hover CSS you wrote will trigger on the first tap. */
     .card-img-overlay {
-        height: 45%; /* Slightly more height for better touch visibility */
+        height: 45%;
     }
 
 
@@ -410,32 +475,32 @@
     }
 
     .faq-container .section-container {
-        flex-direction: column; /* Stack the illustration and text */
+        flex-direction: column;
         text-align: center;
     }
 
     .faq-content {
-        width: 100%; /* Take full width */
-        order: 1; /* Move text above image */
+        width: 100%;
+        order: 1;
     }
 
     .faq-illustration {
         width: 100%;
-        order: 2; /* Move illustration below questions */
+        order: 2;
         margin-top: 40px;
     }
 
     .faq-illustration img {
-        max-width: 80%; /* Don't let the image get too huge on mobile */
+        max-width: 80%;
     }
 
     .accordion-header {
-        font-size: 1rem; /* Slightly smaller text for mobile */
+        font-size: 1rem;
         padding: 15px 0;
     }
 
     .accordion-header span {
-        padding-right: 10px; /* Prevent text from hitting the icon */
+        padding-right: 10px;
     }
 
 
@@ -448,7 +513,7 @@
     }
 
     .footer-top-right {
-        flex-direction: column; /* Stack link columns vertically */
+        flex-direction: column;
         text-align: center;
         gap: 40px;
     }
@@ -457,13 +522,12 @@
         margin-bottom: 15px;
     }
 
-    /* Remove padding/margin from lists for centering */
     .footer-col ul {
         padding: 0;
     }
 
     .footer-logo img {
-        width: 180px; /* Slightly smaller logo on mobile */
+        width: 180px;
     }
 
     .footer-bottom {
@@ -485,4 +549,45 @@
     .navmenu {
         width: 70%;
     }
+
+
+
+
+    .main-feature-image {
+        height: 200px;
+    }
+
+
+
+
+
+    /* about page */
+
+    .experience-badge {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    }
+
+
+}
+
+
+
+
+@media (max-width: 400px) {
+
+    /* about page */
+
+    .experience-badge {
+        position: relative;
+        top: 10px;
+        right: 0;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+
 }
