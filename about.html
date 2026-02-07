@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>GharKaali - About Us</title>
+        <title>GharKaMali - About Us</title>
         <link
             href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
             rel="stylesheet">
@@ -20,7 +20,7 @@
             <div class="section-container">
                 <div class="header-container">
                     <a href="index.html" class="logo">
-                        <img src="img/logo.webp" alt="Logo">
+                        <img src="img/logo-2.webp" alt="Logo">
                     </a>
 
                     <button class="mobile-nav-toggle" aria-label="Toggle navigation">
@@ -33,29 +33,25 @@
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html" class="active">About Us</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="services.html">Services</a></li>
                             <li><a href="#">Contact</a></li>
                             <li><a href="#">Blogs</a></li>
-                            <li class="mobile-only"><a class="navbar-btn" href="#">Enquire Now</a></li>
+                            <li class="mobile-only"><a class="navbar-btn open-contact-popup">Enquire Now</a></li>
                         </ul>
                     </nav>
 
-                    <a class="navbar-btn desktop-only" href="#">Enquire Now</a>
+                    <a class="navbar-btn desktop-only open-contact-popup">Enquire Now</a>
                 </div>
             </div>
         </header>
 
-
-
-
-
         <section class="about-hero">
             <div class="section-container">
                 <span class="sub-heading">About GharKaMali</span>
-                <h1>Professional Gardening Services for <span class="highlight">Urban Homes & Societies</span></h1>
-                <p class="lead-text">GharKaMali is a professional gardening and plant maintenance service designed for
-                    modern urban living. We help homeowners, apartment residents, and societies maintain healthy,
-                    beautiful green spaces without the stress of daily plant care.</p>
+                <h1>Professional Gardening Services for <span class="highlight">Homes & Societies</span></h1>
+                <p class="lead-text">GharKaMali was founded to bring professionalism, reliability, and transparency to
+                    home and society gardening services. Along with expert plant care, we also help customers source
+                    quality gardening products as add-ons.</p>
             </div>
         </section>
 
@@ -88,23 +84,26 @@
                 <div class="detail-image">
                     <img src="img/urban-gardening.webp" alt="Urban gardening in Noida and Gurugram">
                     <div class="experience-badge">
-                        <strong>Easy - Professional - Sustainable</strong>  
+                        <strong>Easy&nbsp; • &nbsp;Professional&nbsp; • &nbsp;Sustainable</strong>
                     </div>
                 </div>
                 <div class="detail-content">
                     <h3>Solving the Urban Green Crisis</h3>
-                    <p>With increasing urbanisation in cities like <strong>Noida, Greater Noida West, and Gurugram</strong>, many homes struggle to keep plants alive due to lack of time, proper knowledge, and reliable gardeners.</p>
+                    <p>With increasing urbanisation in cities like <strong>Noida, Greater Noida West, and
+                            Gurugram</strong>, many homes struggle to keep plants alive due to lack of time, proper
+                        knowledge, and reliable gardeners.</p>
 
-                    <p>GharKaMali was created to solve this problem through <strong>structured, subscription-based gardening services</strong>. Our trained gardeners provide regular plant care, soil management, fertilisation, and overall maintenance.</p>
+                    <p>GharKaMali was created to solve this problem through <strong>structured, subscription-based
+                            gardening services</strong>. Our trained gardeners provide regular plant care, soil
+                        management, fertilisation, and overall maintenance.</p>
 
                     <div class="goal-box">
-                        <p>"At GharKaMali, our goal is simple: to make home gardening easy, professional, and sustainable for every urban household."</p>
+                        <p>"At GharKaMali, our goal is simple: to make home gardening easy, professional, and
+                            sustainable for every urban household."</p>
                     </div>
                 </div>
             </div>
         </section>
-
-
 
         <section class="promise-banner">
             <div class="promise-content">
@@ -116,8 +115,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <section class="past-projects">
             <div class="section-container">
@@ -162,17 +159,12 @@
             </div>
         </section>
 
-
-
-
-
-
         <footer>
             <div class="section-container">
                 <div class="footer-top">
                     <div class="footer-top-left">
                         <a href="#" class="footer-logo">
-                            <img src="img/logo.webp" alt="Garde Agriculture Logo">
+                            <img src="img/logo-2.webp" alt="Garde Agriculture Logo">
                         </a>
                         <p style="margin-top: 10px; opacity: 0.8; width: 70%;">Providing sustainable agricultural
                             solutions for a
@@ -183,7 +175,7 @@
                             <h4>Quick Links</h4>
                             <ul>
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="#">Services</a></li>
+                                <li><a href="services.html">Services</a></li>
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="#">Blog</a></li>
                                 <li><a href="#">Contact</a></li>
@@ -215,6 +207,35 @@
         </footer>
 
 
+        <!-- popup -->
+        <div class="mali-modal-overlay" id="modalOverlay">
+            <div class="mali-modal-card">
+                <button class="close-btn" id="closePopup">&times;</button>
+
+                <div class="modal-content">
+                    <div class="icon-header"><i class="fa-solid fa-leaf"></i></div>
+                    <h2>Book a Mali</h2>
+                    <p>Transform your garden with expert care. Connect with our professional gardeners instantly via
+                        call or WhatsApp.</p>
+
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+                    <div class="contact-actions">
+                        <a href="tel:+911234567890" class="contact-link call">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+
+                        <a href="https://wa.me/911234567890?text=I%20want%20to%20book%20a%20Mali"
+                            class="contact-link whatsapp" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
         <!-- script for navbar -->
         <script>
             const mobileBtn = document.querySelector('.mobile-nav-toggle');
@@ -230,6 +251,37 @@
                 link.addEventListener('click', () => {
                     mobileBtn.classList.remove('active');
                     navMenu.classList.remove('open');
+                });
+            });
+        </script>
+
+        <!-- script for popup -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const modal = document.getElementById('modalOverlay');
+                const closeBtn = document.getElementById('closePopup');
+                const triggers = document.querySelectorAll('.open-contact-popup');
+
+                // Function to Open
+                triggers.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        modal.classList.add('active');
+                    });
+                });
+
+                // Function to Close
+                const closeAction = () => {
+                    modal.classList.remove('active');
+                };
+
+                closeBtn.addEventListener('click', closeAction);
+
+                // Close when clicking outside the white card
+                window.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeAction();
+                    }
                 });
             });
         </script>
