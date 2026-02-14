@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GharKaMali</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="section-container">
+                <div class="header-container">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo-2.webp" alt="Logo">
+                    </a>
+
+                    <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+
+                    <nav class="navmenu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Blogs</a></li>
+                            <li class="mobile-only"><a class="navbar-btn open-contact-popup">Enquire Now</a></li>
+                        </ul>
+                    </nav>
+
+                    <a class="navbar-btn desktop-only open-contact-popup">Enquire Now</a>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <div class="services-container">
+            <div class="section-container">
+                <div class="details-content">
+                    <div class="hero-img-container">
+                        <img id="serviceImg" src="" alt="Service Image">
+                    </div>
+
+                    <div class="details-header">
+                        <span class="badge" id="serviceCategory">Home Garden</span>
+                        <h1 class="details-title" id="serviceTitle">Loading...</h1>
+                        <div class="details-desc" id="serviceDesc"></div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <h3>What's Included?</h3>
+                        <div id="featureList" class="feature-grid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+
+                    <div id="pricingSection">
+                        <span class="addon-section-label">SELECT PLAN / DURATION</span>
+                        <div class="variant-group" id="variantContainer">
+                        </div>
+                    </div>
+
+                    <div id="timeSlotSection" class="hidden">
+                        <span class="addon-section-label">SELECT TIME SLOT (SINGLE VISIT)</span>
+                        <div class="time-slot-grid">
+                            <div class="time-slot" onclick="selectTime(this, '09:00 AM - 11:00 AM')">09:00 AM - 11:00 AM
+                            </div>
+                            <div class="time-slot" onclick="selectTime(this, '11:00 AM - 01:00 PM')">11:00 AM - 01:00 PM
+                            </div>
+                            <div class="time-slot" onclick="selectTime(this, '02:00 PM - 04:00 PM')">02:00 PM - 04:00 PM
+                            </div>
+                            <div class="time-slot" onclick="selectTime(this, '04:00 PM - 06:00 PM')">04:00 PM - 06:00 PM
+                            </div>
+                        </div>
+                        <div id="timeError" style="color:red; font-size:0.8rem; display:none; margin-bottom:10px;">*
+                            Please
+                            select a time slot</div>
+                    </div>
+
+                    <div id="addonSection">
+                        <span class="addon-section-label">ADD-ONS (UPSELL)</span>
+                        <div id="addonContainer">
+                            <div class="addon-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="addon-check" data-price="299"
+                                        data-name="Soil & Repotting">
+                                    <span>Soil & Repotting (Per Pot)</span>
+                                </label>
+                                <span>+₹299</span>
+                            </div>
+                            <div class="addon-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="addon-check" data-price="499"
+                                        data-name="Fertilizer Treatment">
+                                    <span>Fertilizer Treatment</span>
+                                </label>
+                                <span>+₹499</span>
+                            </div>
+                            <div class="addon-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="addon-check" data-price="399"
+                                        data-name="Pest Control">
+                                    <span>Organic Pest Control</span>
+                                </label>
+                                <span>+₹399</span>
+                            </div>
+                            <div class="addon-item">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="addon-check" data-price="899"
+                                        data-name="Balcony Deep Clean">
+                                    <span>Balcony Deep Clean</span>
+                                </label>
+                                <span>+₹899</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="summarySection" class="price-summary">
+                        <div class="summary-row">
+                            <span>Base Service</span>
+                            <span id="summaryBase">₹0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Add-ons</span>
+                            <span id="summaryAddons">₹0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>GST (18%)</span>
+                            <span id="summaryGST">₹0</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total Payable</span>
+                            <span id="summaryTotal">₹0</span>
+                        </div>
+                    </div>
+
+                    <div id="customQuoteMsg" class="hidden"
+                        style="background: #e8f4fd; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px;">
+                        <h3 style="color: #0d47a1;">Custom Quote Required</h3>
+                        <p style="font-size: 0.9rem; margin-top: 10px; color:#555">This service requires a site visit or
+                            detailed discussion to provide an accurate estimate.</p>
+                    </div>
+
+                    <a href="#" class="btn-book" id="bookBtn"
+                        style="display:flex; justify-content:center; align-items:center; text-decoration:none;">
+                        Proceed to Book
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="section-container slide-up">
+                <div class="footer-top">
+                    <div class="footer-top-left">
+                        <a href="#" class="footer-logo">
+                            <img src="img/logo-2.webp" alt="Garde Agriculture Logo">
+                        </a>
+                        <p style="margin-top: 10px; opacity: 0.8; width: 70%; line-height: 1.4;">Professional Gardening
+                            Services for Urban Homes & Societies</p>
+                        <p class="location-text">
+                            <span class="city-tags">
+                                <a href="city.html?name=Noida" class="city-link">Noida</a>
+                                <a href="city.html?name=Greater%20Noida%20West" class="city-link">Greater Noida West</a>
+                                <a href="city.html?name=Gurugram" class="city-link">Gurugram</a>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="footer-top-right">
+                        <div class="footer-col">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Pricing</a></li>
+                                <li><a href="index.html">Services</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="#">Mali on Demand</a></li>
+                                <li><a href="#">Monthly Plant Care Plan</a></li>
+                                <li><a href="#">Society Gardening AMC</a></li>
+                                <li><a href="#">Balcony & Terrace Makeover</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li>
+                                    <a href="tel:+919999988888">
+                                        <i class="fa-solid fa-phone"></i>+91-99999-88888
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:gharkamali@gmail.com?subject=Inquiry%20for%20Gardening%20Services">
+                                        <i class="fa-solid fa-envelope"></i>gharkamali@gmail.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=123+Street,+234+Area,+New+Delhi,+India+334455"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-dot"></i>123 Street, 234 Area, New Delhi, India
+                                        (334455)
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="social-box">
+                                <a href="https://wa.me/919999988888" class="social-icon" target="_blank">
+                                    <i class="fa-brands fa-square-whatsapp"></i>
+                                </a>
+                                <a href="#" class="social-icon" target="_blank">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" target="_blank">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon" target="_blank">
+                                    <i class="fa-brands fa-square-twitter"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 GharKaMali. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <!-- popup -->
+        <div class="mali-modal-overlay" id="modalOverlay">
+            <div class="mali-modal-card">
+                <button class="close-btn" id="closePopup">&times;</button>
+
+                <div class="modal-content">
+                    <div class="icon-header"><i class="fa-solid fa-leaf"></i></div>
+                    <h2>Book a Mali</h2>
+                    <p>Transform your garden with expert care. Connect with our professional gardeners instantly via
+                        call or WhatsApp.</p>
+
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+                    <div class="contact-actions">
+                        <a href="tel:+911234567890" class="contact-link call">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+
+                        <a href="https://wa.me/911234567890?text=I%20want%20to%20book%20a%20Mali"
+                            class="contact-link whatsapp" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- script for navbar -->
+        <script>
+            const mobileBtn = document.querySelector('.mobile-nav-toggle');
+            const navMenu = document.querySelector('.navmenu');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileBtn.classList.toggle('active');
+                navMenu.classList.toggle('open');
+            });
+
+            // Optional: Close menu when a link is clicked
+            document.querySelectorAll('.navmenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileBtn.classList.remove('active');
+                    navMenu.classList.remove('open');
+                });
+            });
+        </script>
+
+        <!-- script for slide up animation -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // Create the "Eye" (Observer)
+                const slideUpObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        // If the element enters the screen
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+
+                            // Once it has slid up, stop watching it (until refresh)
+                            slideUpObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0, // Starts when 0% of the element is visible
+                    rootMargin: "0px 0px -50px 0px" // Slight offset so it triggers before it hits the very bottom
+                });
+
+                // Find everything with the "slide-up" class and start watching it
+                const slideUpElements = document.querySelectorAll('.slide-up');
+                slideUpElements.forEach(el => slideUpObserver.observe(el));
+
+            });
+        </script>
+
+        <!-- script for popup -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const modal = document.getElementById('modalOverlay');
+                const closeBtn = document.getElementById('closePopup');
+                const triggers = document.querySelectorAll('.open-contact-popup');
+
+                // Function to Open
+                triggers.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        modal.classList.add('active');
+                    });
+                });
+
+                // Function to Close
+                const closeAction = () => {
+                    modal.classList.remove('active');
+                };
+
+                closeBtn.addEventListener('click', closeAction);
+
+                // Close when clicking outside the white card
+                window.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeAction();
+                    }
+                });
+            });
+        </script>
+
+
+        <!-- script for dynamic content -->
+        <script>
+            // 1. DATA STORE - EXPANDED & DETAILED
+            const servicesData = {
+                'mali': {
+                    title: "Mali on Demand",
+                    category: "Single Visit Service",
+                    desc: "Our 'Mali on Demand' service is perfect for immediate garden rescue. Whether your plants are drooping, weeds are taking over, or you just need a professional touch for a special occasion, our expert gardeners are ready. We bring our own basic tools and expertise to rejuvenate your green space in a single visit.",
+                    img: "img/service-card-1.webp",
+                    type: "single_visit",
+                    features: [
+                        "<div><strong>Pruning & Trimming:</strong><br>Removal of dead leaves and shaping of overgrown branches.</div>",
+                        "<div><strong>Weeding & Soil Aeration:</strong><br>Clearing invasive weeds and loosening topsoil for better breathability.</div>",
+                        "<div><strong>Pest Inspection:</strong><br>Visual check for mealybugs, aphids, or fungal infections with basic treatment advice.</div>",
+                        "<div><strong>Watering & Misting:</strong><br>Deep watering and foliage cleaning for a fresh look.</div>",
+                        "<div><strong>Waste Disposal:</strong><br>Bagging of green waste generated during the service (disposal at society designated area).</div>"
+                    ],
+                    variants: [
+                        { name: "Quick Fix (2 Hours)", desc: "Ideal for 5-10 pots or small balconies.", price: 499 },
+                        { name: "Half Day (4 Hours)", desc: "Ideal for medium terraces (20+ pots).", price: 899 },
+                        { name: "Full Day (8 Hours)", desc: "Complete overhaul for large gardens.", price: 1599 }
+                    ]
+                },
+                'monthly': {
+                    title: "Monthly Plant Care Plan",
+                    category: "Subscription Service",
+                    desc: "Forget the hassle of remembering when to fertilize or prune. Our Monthly Care Plan puts your garden on autopilot. We assign a dedicated gardener who visits your home on a schedule, ensuring consistent care, early disease detection, and optimal growth for your plants throughout the seasons.",
+                    img: "img/service-card-2.webp",
+                    type: "subscription",
+                    features: [
+                        "<div><strong>Scheduled Visits:</strong><br>Regular visits on fixed days (e.g., every 1st & 15th).</div>",
+                        "<div><strong>Nutrient Management:</strong><br>Application of organic fertilizers (included) to boost growth.</div>",
+                        "<div><strong>Preventive Care:</strong><br>Proactive spraying of neem oil/fungicides to prevent outbreaks.</div>",
+                        "<div><strong>Plant Rotation:</strong><br>Rotating pots for even sunlight exposure.</div>",
+                        "<div><strong>Growth Monitoring:</strong><br>Health report shared after every visit via WhatsApp.</div>"
+                    ],
+                    variants: [
+                        { name: "Basic Plan", desc: "2 Visits/Month. Good for low-maintenance plants.", price: 1199 },
+                        { name: "Standard Plan", desc: "4 Visits/Month. Weekly care for active growth.", price: 1799 },
+                        { name: "Premium Plan", desc: "Weekly Visits + Emergency Call. VIP care.", price: 2999 }
+                    ]
+                },
+                'society': {
+                    title: "Society Gardening AMC",
+                    category: "Commercial Service",
+                    desc: "A well-maintained landscape increases property value and resident satisfaction. Our AMC (Annual Maintenance Contract) covers everything from lawn mowing to hedge trimming for common areas, parks, and entrance lobbies. We deploy a team of uniformed professionals with heavy-duty equipment.",
+                    img: "img/service-card-3.webp",
+                    type: "subscription",
+                    features: [
+                        "<div><strong>Lawn Maintenance:</strong><br>Mowing, edging, and patch repair for lush green grass.</div>",
+                        "<div><strong>Tree & Hedge Management:</strong><br>Professional pruning of tall trees and artistic hedge shaping.</div>",
+                        "<div><strong>Seasonal Replanting:</strong><br>Changing flower beds according to the season (Winter/Summer).</div>",
+                        "<div><strong>Irrigation Check:</strong><br>Monitoring and basic repair of sprinkler systems.</div>"
+                    ],
+                    variants: [] // Custom
+                },
+                'balcony': {
+                    title: "Balcony & Terrace Makeover",
+                    category: "Design & Setup",
+                    desc: "Transform your bare balcony into a lush sanctuary. We handle the entire lifecycle: design consultation, pot selection, plant sourcing, vertical garden installation, and lighting. Whether you want a Zen corner, a vegetable patch, or a floral paradise, we build it custom for you.",
+                    img: "img/service-card-4.webp",
+                    type: "subscription",
+                    features: [
+                        "<div><strong>3D Design Layout:</strong><br>Visualizing the space before we begin work.</div>",
+                        "<div><strong>Vertical Gardens:</strong><br>Space-saving green walls with drip irrigation.</div>",
+                        "<div><strong>Custom Planters:</strong><br>Fiber, ceramic, or wooden stands tailored to your dimensions.</div>",
+                        "<div><strong>Theme Selection:</strong><br>Tropical, Desert, Japanese, or Kitchen Garden themes.</div>"
+                    ],
+                    variants: [] // Custom
+                }
+            };
+
+            // 2. INITIALIZATION
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceId = urlParams.get('service') || 'mali'; // Default to Mali
+            const data = servicesData[serviceId];
+
+            // Populate DOM
+            document.getElementById('serviceTitle').innerText = data.title;
+            document.getElementById('serviceCategory').innerText = data.category;
+            document.getElementById('serviceDesc').innerText = data.desc;
+            document.getElementById('serviceImg').src = data.img;
+
+            // Populate Features
+            const featureContainer = document.getElementById('featureList');
+            featureContainer.innerHTML = data.features.map(f => `
+            <div class="service-feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                ${f}
+            </div>
+        `).join('');
+
+            // Elements
+            const pricingSection = document.getElementById('pricingSection');
+            const summarySection = document.getElementById('summarySection');
+            const customQuoteMsg = document.getElementById('customQuoteMsg');
+            const timeSlotSection = document.getElementById('timeSlotSection');
+            const bookBtn = document.getElementById('bookBtn');
+            const variantContainer = document.getElementById('variantContainer');
+
+            let selectedBasePrice = 0;
+            let selectedVariantName = "";
+            let selectedTimeSlot = null;
+
+            // 3. RENDER LOGIC
+            if (data.type === 'custom') {
+                pricingSection.classList.add('hidden');
+                summarySection.classList.add('hidden');
+                document.getElementById('addonSection').classList.add('hidden');
+                customQuoteMsg.classList.remove('hidden');
+                bookBtn.innerText = "Request Consultation on WhatsApp";
+            } else {
+                // Render Variants
+                data.variants.forEach((variant, index) => {
+                    const div = document.createElement('div');
+                    div.className = `variant-option ${index === 0 ? 'active' : ''}`;
+                    div.innerHTML = `
+                    <div class="variant-info">
+                        <h4>${variant.name}</h4>
+                        <span>${variant.desc}</span>
+                    </div>
+                    <div class="variant-price">₹${variant.price}</div>
+                `;
+
+                    div.addEventListener('click', () => {
+                        document.querySelectorAll('.variant-option').forEach(el => el.classList.remove('active'));
+                        div.classList.add('active');
+                        selectedBasePrice = variant.price;
+                        selectedVariantName = variant.name;
+                        calculateTotal();
+                    });
+                    variantContainer.appendChild(div);
+                });
+
+                // Initial Set
+                if (data.variants.length > 0) {
+                    selectedBasePrice = data.variants[0].price;
+                    selectedVariantName = data.variants[0].name;
+                }
+
+                // Show Time Slot ONLY if Single Visit
+                if (data.type === 'single_visit') {
+                    timeSlotSection.classList.remove('hidden');
+                }
+
+                calculateTotal();
+            }
+
+            // 4. TIME SLOT SELECTION
+            function selectTime(element, time) {
+                document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('active'));
+                element.classList.add('active');
+                selectedTimeSlot = time;
+                document.getElementById('timeError').style.display = 'none';
+                calculateTotal(); // Update WhatsApp link
+            }
+
+            // 5. CALCULATION & WHATSAPP GENERATOR
+            const addonChecks = document.querySelectorAll('.addon-check');
+            addonChecks.forEach(chk => chk.addEventListener('change', calculateTotal));
+
+            function calculateTotal() {
+                // Determine Base WhatsApp URL
+                let waNumber = "919999999999"; // REPLACE WITH YOUR NUMBER
+                let waMessage = "";
+
+                if (data.type === 'custom') {
+                    waMessage = `Hi, I am interested in a Custom Quote for *${data.title}*. Please call me back.`;
+                } else {
+                    // Calculate Price
+                    let addonTotal = 0;
+                    let selectedAddons = [];
+                    addonChecks.forEach(chk => {
+                        if (chk.checked) {
+                            addonTotal += parseInt(chk.dataset.price);
+                            selectedAddons.push(chk.dataset.name);
+                        }
+                    });
+
+                    const subtotal = selectedBasePrice + addonTotal;
+                    const gst = subtotal * 0.18;
+                    const total = subtotal + gst;
+
+                    // Update UI
+                    document.getElementById('summaryBase').innerText = `₹${selectedBasePrice}`;
+                    document.getElementById('summaryAddons').innerText = `₹${addonTotal}`;
+                    document.getElementById('summaryGST').innerText = `₹${gst.toFixed(2)}`;
+                    document.getElementById('summaryTotal').innerText = `₹${total.toFixed(0)}`;
+
+                    // Build Message
+                    let addonStr = selectedAddons.length > 0 ? ` + Add-ons: ${selectedAddons.join(', ')}` : "";
+                    let timeStr = selectedTimeSlot ? `\n🕒 Time Slot: ${selectedTimeSlot}` : "";
+
+                    if (data.type === 'single_visit' && !selectedTimeSlot) {
+                        timeStr = "\n🕒 Time Slot: Not Selected Yet";
+                    }
+
+                    waMessage = `Hello! I would like to book:\n\n🌿 *${data.title}*\n📋 Plan: ${selectedVariantName}${addonStr}${timeStr}\n💰 Total: ₹${total.toFixed(0)} (Inc GST)`;
+                }
+
+                // Attach to Button
+                bookBtn.href = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
+            }
+
+            // Validation on Click for Single Visit
+            bookBtn.addEventListener('click', (e) => {
+                if (data.type === 'single_visit' && !selectedTimeSlot) {
+                    e.preventDefault();
+                    document.getElementById('timeError').style.display = 'block';
+                    // Scroll to time section
+                    document.getElementById('timeSlotSection').scrollIntoView({ behavior: "smooth" });
+                }
+            });
+
+        </script>
+
+    </body>
+
+    </html>

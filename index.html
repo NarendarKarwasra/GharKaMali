@@ -10,6 +10,8 @@
             rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="responsive.css">
     </head>
@@ -49,7 +51,8 @@
         <section class="hero" id="hero">
             <div class="section-container">
                 <div class="hero-content">
-                    <h1>Professional Gardening Services for Homes & Societies</h1>
+                    <h1>Professional Gardening Services for <span style="color: #ccc;">Homes</span> & <span style="color: #ccc;">Societies</span></h1>
+                    <!-- <h1>Professional Gardening & Plant Care Services in <span style="color: #ccc;">Noida</span> & <span style="color: #ccc;">Greater Noida West</span></h1> -->
 
                     <div class="hero-tagline">
                         <p>Healthy plants</p>
@@ -58,11 +61,6 @@
                         <p>•</p>
                         <p>Reliable Malis</p>
                     </div>
-
-                    <!-- <p class="location-text">
-                        <i class="fa-solid fa-location-dot"></i> Serving in <strong>Noida | Greater Noida West |
-                            Gurugram</strong>
-                    </p> -->
 
                     <p class="location-text">
                         <i class="fa-solid fa-location-dot"></i> Serving in:
@@ -73,11 +71,18 @@
                         </span>
                     </p>
 
-                    <p class="hero-description">
+                    <div class="btn-container">
+                        <a href="services.html" class="btn-plan">Check Pricing & Availability</a>
+                        <a class="btn-plan open-contact-popup">Book a Mali Today</a>
+                    </div>
+
+                    <!-- <p class="hero-description">
                         GharKaMali provides professional gardening and plant maintenance services for busy urban homes
                         and residential societies. We offer flexible one-time services through Mali on Demand,
                         structured monthly plant care plans, and value-added gardening solutions.
-                    </p>
+                    </p> -->
+                    <p class="hero-description">Expert plant care, trained & supervised gardeners, and reliable monthly
+                        plans for busy urban homes and residential societies.</p>
 
                     <div class="home-badge-container">
                         <div class="home-badge">Balcony</div>
@@ -86,16 +91,137 @@
                         <div class="home-badge">Society Green Areas</div>
                     </div>
 
-                    <div class="btn-container">
-                        <a class="btn-plan open-contact-popup">Book a Mali on Demand</a>
-                        <a href="services.html" class="btn-plan">Get Monthly Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="section-container slide-up">
+                <h2>Book Your Gardening Services</h2>
+
+                <div class="services-grid">
+                    <div class="service-main-image">
+                        <img src="img/services-main.webp" alt="Professional Gardening Services">
+                    </div>
+
+                    <div class="service-main-content">
+                        <!-- <h3>Our Gardening Services</h3> -->
+                        <p>
+                            GharKaMali is your one-stop solution for all things green. Whether you have a small balcony
+                            or manage a large residential society, our expert gardeners bring professional care right to
+                            your doorstep.
+                        </p>
+                        <p>
+                            Our range of services includes <strong>Mali on Demand</strong> for quick fixes,
+                            <strong>Monthly Maintenance Plans</strong> for consistent care, and comprehensive
+                            <strong>Society Gardening AMCs</strong>.
+                        </p>
+                        <p>
+                            Looking for a change? We specialize in <strong>Balcony and Garden Makeovers</strong> to
+                            transform your space.
+                        </p>
+                        <p>From routine upkeep to complete transformations, we are dedicated to nurturing your
+                            environment and bringing the beauty of nature closer to your life.</p>
+                        <a href="services.html" class="btn">Explore All Services</a>
+                    </div>
+                </div>
+
+                <div class="service-card-container slide-up">
+                    <div class="service-card">
+                        <div class="service-card-img">
+                            <img src="img/service-card-1.webp" alt="">
+                        </div>
+                        <div class="service-card-heading">Mali on Demand</div>
+                        <div class="service-card-desc">Book a professional for pruning, potting or weeding whenever you
+                            need it.</div>
+                        <div class="service-card-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a href="service-details.html?service=mali" class="service-card-btn btn">See Details</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-img">
+                            <img src="img/service-card-2.webp" alt="">
+                        </div>
+                        <div class="service-card-heading">Monthly Plant Care Plan</div>
+                        <div class="service-card-desc">Scheduled visits focusing on keeping your greenery thriving
+                            year-round.</div>
+                        <div class="service-card-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a href="service-details.html?service=monthly" class="service-card-btn btn">See Details</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-img">
+                            <img src="img/service-card-3.webp" alt="">
+                        </div>
+                        <div class="service-card-heading">Society Gardening AMC</div>
+                        <div class="service-card-desc">Complete society garden AMC regular maintenance for common areas.
+                        </div>
+                        <div class="service-card-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a href="service-details.html?service=society" class="service-card-btn btn">See Details</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-img">
+                            <img src="img/service-card-4.webp" alt="">
+                        </div>
+                        <div class="service-card-heading">Balcony & Terrace Makeover</div>
+                        <div class="service-card-desc">We design and set up custom gardens for your specific space.
+                        </div>
+                        <div class="service-card-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <a href="service-details.html?service=balcony" class="service-card-btn btn">See Details</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="promise-banner">
+            <div class="section-container slide-up">
+                <div id="statistics" class="counter-container">
+                    <div class="counter-box">
+                        <i class="fas fa-home"></i>
+                        <h2 class="counter" data-target="1500">0</h2>
+                        <p>Homes Served</p>
+                    </div>
+
+                    <div class="counter-box">
+                        <i class="fas fa-leaf"></i>
+                        <h2 class="counter" data-target="45">0</h2>
+                        <p>Society Partnerships</p>
+                    </div>
+
+                    <div class="counter-box">
+                        <i class="fab fa-google"></i>
+                        <h2 class="counter decimal-counter" data-target="4.9">0.0</h2>
+                        <p>Google Rating</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="why-choose-us">
-            <div class="section-container">
+            <div class="section-container slide-up">
                 <h2>Why Choose GharKaMali?</h2>
                 <p class="choose-description">Transform your living space into a thriving green sanctuary without the
                     stress. We combine professional expertise with eco-friendly practices to provide reliable,
@@ -110,43 +236,41 @@
                         <div class="feature-item">
                             <div class="feature-icon"><i class="fas fa-user-check"></i></div>
                             <div class="feature-text">
-                                <h3>Professional Gardening Services</h3>
-                                <p>Our trained gardeners and supervisors follow defined maintenance processes to deliver
-                                    reliable and consistent gardening services for homes and societies.</p>
+                                <h3>Trained & Supervised Gardeners</h3>
+                                <p>Our gardeners are professionally trained and regularly supervised to ensure
+                                    consistent, high-quality service on every visit.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div>
                             <div class="feature-text">
-                                <h3>Hassle-Free Plant Maintenance</h3>
-                                <p>From plant care and soil health to fertilisers and replacements, we manage
-                                    everything—so you don’t have to worry about plant survival.</p>
+                                <h3>Structured Maintenance Process</h3>
+                                <p>We follow a step-by-step maintenance system to keep your garden healthy, neat, and
+                                    properly managed.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><i class="fas fa-building"></i></div>
                             <div class="feature-text">
-                                <h3>Home & Society Gardening Solutions</h3>
-                                <p>We offer customised gardening services for individual homes, apartment complexes,
-                                    RWAs, and builders—scalable from a single balcony to entire residential societies.
+                                <h3>Eco-Friendly Plant Care</h3>
+                                <p>We use safe, eco-friendly methods and products that protect your plants, soil, and
+                                    the environment.
                                 </p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><i class="fas fa-leaf"></i></div>
                             <div class="feature-text">
-                                <h3>Sustainable & Eco-Friendly Practices</h3>
-                                <p>We promote responsible gardening through natural soil mixes, compost-based
-                                    fertilisers, and environmentally friendly maintenance methods.</p>
+                                <h3>Flexible Plans & Easy Rescheduling</h3>
+                                <p>Choose plans that fit your needs and reschedule services easily whenever your
+                                    schedule changes.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon"><i class="fas fa-seedling"></i></div>
                             <div class="feature-text">
-                                <h3>Local Expertise with Scalable Operations</h3>
-                                <p>By partnering with trusted local nurseries and following uniform quality standards,
-                                    we deliver fresh, location-specific gardening solutions that scale efficiently
-                                    across cities.</p>
+                                <h3>Transparent Pricing</h3>
+                                <p>No hidden charges — clear pricing with complete details before every service.</p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +281,7 @@
         </section>
 
         <section class="promise-banner">
-            <div class="promise-content">
+            <div class="promise-content slide-up">
                 <h1 class="promise-tagline">Our Promises</h1>
                 <div class="promise-items">
                     <span class="promise-item">Reliable Gardening Services</span>
@@ -167,71 +291,8 @@
             </div>
         </section>
 
-        <section id="services">
-            <div class="section-container">
-                <h2>Growing Beautiful Spaces</h2>
-
-                <div class="services-grid">
-                    <div class="service-main-image">
-                        <img src="img/services-main.webp" alt="Professional Gardening Services">
-                    </div>
-
-                    <div class="service-main-content">
-                        <h3>Our Gardening Services</h3>
-                        <p>
-                            GharKaMali is your one-stop solution for all things green. Whether you have a small balcony
-                            or manage a large residential society, our expert gardeners bring professional care right to
-                            your doorstep.
-                        </p>
-                        <p>
-                            Our range of services includes <strong>Mali on Demand</strong> for quick fixes,
-                            <strong>Monthly Maintenance Plans</strong> for consistent care, and comprehensive
-                            <strong>Society Gardening AMCs</strong>.
-                        </p>
-                        <p>
-                            Looking for a change? We specialize in <strong>Balcony and Garden Makeovers</strong> to
-                            transform your space, and we provide high-quality <strong>Gardening Products &
-                                Supplies</strong> to ensure your plants get the very best nourishment.
-                        </p>
-                        <a href="services.html" class="btn">Explore All Services</a>
-                    </div>
-                </div>
-
-                <div class="service-cards">
-                    <div class="service-card">
-                        <img src="img/service-card-1.webp" alt="Mali on Demand">
-                        <div class="service-card-content">
-                            <h4>Mali on Demand</h4>
-                            <p>Perfect for one-time tasks. Book a professional for pruning, potting, weeding, or a
-                                general garden health check-up whenever you need it.</p>
-                            <a href="#">Book Now &rarr;</a>
-                        </div>
-                    </div>
-
-                    <div class="service-card">
-                        <img src="img/service-card-3.webp" alt="Monthly Plant Care Plans">
-                        <div class="service-card-content">
-                            <h4>Monthly Plant Care Plans</h4>
-                            <p>Consistent care for busy plant parents. Scheduled visits focusing on fertilization, pest
-                                control, and keeping your greenery thriving year-round.</p>
-                            <a href="#">View Plans &rarr;</a>
-                        </div>
-                    </div>
-
-                    <div class="service-card">
-                        <img src="img/service-card-2.webp" alt="Garden Setup & Makeover">
-                        <div class="service-card-content">
-                            <h4>Garden Setup & Makeover</h4>
-                            <p>From empty balconies to lush retreats. We design and set up custom gardens with the right
-                                soil, pots, and plants for your specific space.</p>
-                            <a href="#">View Plans &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="past-projects">
+        <!-- our work section -->
+        <!-- <section class="past-projects">
             <div class="section-container">
                 <div class="projects-content">
                     <div class="projects-text">
@@ -272,10 +333,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <div class="blog">
-            <div class="section-container">
+            <div class="section-container slide-up">
                 <h2>Latest from Our Blog</h2>
                 <p style="color: #999;">You can relay on our amazing features list and also our customer services will
                     be great experience for you without doubt</p>
@@ -338,8 +399,8 @@
 
         <section class="testimonial-section">
 
-            <div class="section-container">
-                <h2>Lawn & Landscaping Customer Testimonials</h2>
+            <div class="section-container slide-up">
+                <h2>TRUST & SOCIAL PROOF</h2>
                 <p class="subtitle">Over 185 real client reviews</p>
 
                 <div class="slider-wrapper">
@@ -347,7 +408,7 @@
 
                     <div class="testimonial-slider" id="slider">
 
-                        <div class="testimonial-card">
+                        <!-- <div class="testimonial-card">
                             <div class="card-header">
                                 <div class="avatar circle-text">A</div>
                                 <div class="user-info">
@@ -363,93 +424,114 @@
                                 <span class="date">a month ago</span>
                                 <span class="source"><i class="fab fa-google color-google"></i> Google review</span>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="testimonial-card">
-                            <div class="card-header">
-                                <div class="avatar circle-text" style="background: #4a6741;">P</div>
-                                <div class="user-info">
-                                    <h4>Preet Kaur</h4>
-                                    <p class="location">New Delhi, India</p>
-                                    <div class="stars">★★★★★</div>
+                            <div class="testimonial-images">
+                                <div class="img-box image-1">
+                                    <img src="img/before-after/before-1.webp" alt="Garden Before">
+                                </div>
+                                <div class="img-box image-2">
+                                    <img src="img/before-after/after-1.webp" alt="Garden After">
                                 </div>
                             </div>
-                            <p class="review-text">"We used Kirk's Lawn Care for our fall cleanup. They handled the 6"
-                                deep yard of leaves with ease. Highly recommended and their customer service is top
-                                notch!"</p>
-                            <div class="card-footer">
-                                <span class="date">a month ago</span>
-                                <span class="source"><i class="fab fa-google color-google"></i> Google review</span>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card">
-                            <div class="card-header">
-                                <div class="avatar circle-text">R</div>
-                                <div class="user-info">
-                                    <h4>Rahul Singh</h4>
-                                    <p class="location">New Delhi, India</p>
-                                    <div class="stars">★★★★★</div>
-                                </div>
-                            </div>
-                            <p class="review-text">"Kirk and his team did an excellent job on fall leaves clean up of my
-                                yard. The quote was timely and reasonable. I would highly recommend."</p>
-                            <div class="card-footer">
-                                <span class="date">a month ago</span>
-                                <span class="source"><i class="fab fa-google color-google"></i> Google review</span>
+                            <div class="testimonial-content">
+                                <h3 class="user-name">Amit Mishra</h3>
+                                <p class="user-location">New Delhi, India</p>
+                                <div class="rating">★★★★★</div>
+                                <p class="description">
+                                    "GharKaMali transformed my balcony into a green paradise. Their monthly maintenance
+                                    is top-notch and very professional! Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Delectus cumque molestiae alias dignissimos accusamus quos iure
+                                    officia hic veritatis iusto."
+                                </p>
                             </div>
                         </div>
 
                         <div class="testimonial-card">
-                            <div class="card-header">
-                                <div class="avatar circle-text" style="background: #4a6741;">M</div>
-                                <div class="user-info">
-                                    <h4>Monika Singh</h4>
-                                    <p class="location">New Delhi, India</p>
-                                    <div class="stars">★★★★★</div>
+                            <div class="testimonial-images">
+                                <div class="img-box image-1">
+                                    <img src="img/before-after/before-2.webp" alt="Garden Before">
+                                </div>
+                                <div class="img-box image-2">
+                                    <img src="img/before-after/after-2.webp" alt="Garden After">
                                 </div>
                             </div>
-                            <p class="review-text">"Extremely professional service. My lawn has never looked better.
-                                They are punctual and very thorough with the edges."</p>
-                            <div class="card-footer">
-                                <span class="date">2 months ago</span>
-                                <span class="source"><i class="fab fa-google color-google"></i> Google review</span>
+                            <div class="testimonial-content">
+                                <h3 class="user-name">Ragul Gupta</h3>
+                                <p class="user-location">Noida, India</p>
+                                <div class="rating">★★★★★</div>
+                                <p class="description">
+                                    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium vel quaerat
+                                    esse tenetur illum officiis impedit blanditiis ullam dolores, aspernatur quis, ipsum
+                                    totam, quisquam laborum debitis dolorum! Molestias, nemo tenetur."
+                                </p>
                             </div>
                         </div>
 
                         <div class="testimonial-card">
-                            <div class="card-header">
-                                <div class="avatar circle-text">M</div>
-                                <div class="user-info">
-                                    <h4>Mohit Yadav</h4>
-                                    <p class="location">New Delhi, India</p>
-                                    <div class="stars">★★★★★</div>
+                            <div class="testimonial-images">
+                                <div class="img-box image-1">
+                                    <img src="img/before-after/before-3.webp" alt="Garden Before">
+                                </div>
+                                <div class="img-box image-2">
+                                    <img src="img/before-after/after-3.webp" alt="Garden After">
                                 </div>
                             </div>
-                            <p class="review-text">"I've used several services, but Kirk's is by far the most reliable.
-                                Fair pricing and great communication throughout."</p>
-                            <div class="card-footer">
-                                <span class="date">3 weeks ago</span>
-                                <span class="source"><i class="fab fa-google color-google"></i> Google review</span>
+                            <div class="testimonial-content">
+                                <h3 class="user-name">Aditi Rao</h3>
+                                <p class="user-location">New Delhi, India</p>
+                                <div class="rating">★★★★★</div>
+                                <p class="description">
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident velit libero
+                                    mollitia, delectus cum, aperiam culpa sunt quaerat eveniet in possimus harum vel
+                                    molestias exercitationem ipsa fugit voluptates soluta facere."
+                                </p>
                             </div>
                         </div>
 
                         <div class="testimonial-card">
-                            <div class="card-header">
-                                <div class="avatar circle-text" style="background: #4a6741;">J</div>
-                                <div class="user-info">
-                                    <h4>Jyoti Rao</h4>
-                                    <p class="location">New Delhi, India</p>
-                                    <div class="stars">★★★★★</div>
+                            <div class="testimonial-images">
+                                <div class="img-box image-1">
+                                    <img src="img/before-after/before-4.webp" alt="Garden Before">
+                                </div>
+                                <div class="img-box image-2">
+                                    <img src="img/before-after/after-4.webp" alt="Garden After">
                                 </div>
                             </div>
-                            <p class="review-text">"The fall cleanup was fast and efficient. Saved me a whole weekend of
-                                raking. Will definitely hire them again next season!"</p>
-                            <div class="card-footer">
-                                <span class="date">a month ago</span>
-                                <span class="source"><i class="fab fa-google color-google"></i> Google review</span>
+                            <div class="testimonial-content">
+                                <h3 class="user-name">Vijay Mali</h3>
+                                <p class="user-location">New Delhi, India</p>
+                                <div class="rating">★★★★★</div>
+                                <p class="description">
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ea recusandae ex
+                                    omnis hic velit voluptatum cupiditate saepe enim aut ratione pariatur, eos ad eaque
+                                    ipsum voluptates laudantium. Illo, suscipit? "
+                                </p>
                             </div>
                         </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-images">
+                                <div class="img-box image-1">
+                                    <img src="img/before-after/before-2.webp" alt="Garden Before">
+                                </div>
+                                <div class="img-box image-2">
+                                    <img src="img/before-after/after-2.webp" alt="Garden After">
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <h3 class="user-name">Sumit Patra</h3>
+                                <p class="user-location">New Delhi, India</p>
+                                <div class="rating">★★★★★</div>
+                                <p class="description">
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem deleniti
+                                    corrupti aperiam, praesentium velit. Commodi, voluptates perferendis maxime harum
+                                    tenetur odio consequuntur ipsam facilis quaerat eius blanditiis minus dolor!"
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
 
                     <button class="nav-btn right-btn" onclick="scrollSlider(1)">&#10095;</button>
@@ -458,7 +540,7 @@
         </section>
 
         <section class="faq-container">
-            <div class="section-container">
+            <div class="section-container slide-up">
                 <div class="faq-content">
                     <h1>Frequently Asked Questions</h1>
 
@@ -524,7 +606,7 @@
         </section>
 
         <footer>
-            <div class="section-container">
+            <div class="section-container slide-up">
                 <div class="footer-top">
                     <div class="footer-top-left">
                         <a href="#" class="footer-logo">
@@ -532,12 +614,20 @@
                         </a>
                         <p style="margin-top: 10px; opacity: 0.8; width: 70%; line-height: 1.4;">Professional Gardening
                             Services for Urban Homes & Societies</p>
+                        <p class="location-text">
+                            <span class="city-tags">
+                                <a href="city.html?name=Noida" class="city-link">Noida</a>
+                                <a href="city.html?name=Greater%20Noida%20West" class="city-link">Greater Noida West</a>
+                                <a href="city.html?name=Gurugram" class="city-link">Gurugram</a>
+                            </span>
+                        </p>
                     </div>
                     <div class="footer-top-right">
                         <div class="footer-col">
                             <h4>Quick Links</h4>
                             <ul>
                                 <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Pricing</a></li>
                                 <li><a href="index.html">Services</a></li>
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="#">Blog</a></li>
@@ -547,19 +637,51 @@
                         <div class="footer-col">
                             <h4>Services</h4>
                             <ul>
-                                <li><a href="#">Lawn Care</a></li>
-                                <li><a href="#">Garden Design</a></li>
-                                <li><a href="#">Plant Care</a></li>
-                                <li><a href="#">Consultation</a></li>
+                                <li><a href="#">Mali on Demand</a></li>
+                                <li><a href="#">Monthly Plant Care Plan</a></li>
+                                <li><a href="#">Society Gardening AMC</a></li>
+                                <li><a href="#">Balcony & Terrace Makeover</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
                             </ul>
                         </div>
                         <div class="footer-col">
                             <h4>Contact Us</h4>
                             <ul>
-                                <li><a href="#">+91-99999-88888</a></li>
-                                <li><a href="#">gharkamali@gmail.com</a></li>
-                                <li><a href="#">123 Street, 234 Area, New Delhi, India (334455)</a></li>
+                                <li>
+                                    <a href="tel:+919999988888">
+                                        <i class="fa-solid fa-phone"></i>+91-99999-88888
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:gharkamali@gmail.com?subject=Inquiry%20for%20Gardening%20Services">
+                                        <i class="fa-solid fa-envelope"></i>gharkamali@gmail.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=123+Street,+234+Area,+New+Delhi,+India+334455"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-dot"></i>123 Street, 234 Area, New Delhi, India
+                                        (334455)
+                                    </a>
+                                </li>
                             </ul>
+
+                            <div class="social-box">
+                                <a href="https://wa.me/919999988888" class="social-icon" target="_blank">
+                                    <i class="fa-brands fa-square-whatsapp"></i>
+                                </a>
+                                <a href="#" class="social-icon" target="_blank">
+                                    <i class="fa-brands fa-square-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" target="_blank">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon" target="_blank">
+                                    <i class="fa-brands fa-square-twitter"></i>
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -616,6 +738,33 @@
                     mobileBtn.classList.remove('active');
                     navMenu.classList.remove('open');
                 });
+            });
+        </script>
+
+        <!-- script for slide up animation -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+                // Create the "Eye" (Observer)
+                const slideUpObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        // If the element enters the screen
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+
+                            // Once it has slid up, stop watching it (until refresh)
+                            slideUpObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0, // Starts when 0% of the element is visible
+                    rootMargin: "0px 0px -50px 0px" // Slight offset so it triggers before it hits the very bottom
+                });
+
+                // Find everything with the "slide-up" class and start watching it
+                const slideUpElements = document.querySelectorAll('.slide-up');
+                slideUpElements.forEach(el => slideUpObserver.observe(el));
+
             });
         </script>
 
@@ -717,6 +866,60 @@
                         closeAction();
                     }
                 });
+            });
+        </script>
+
+        <!-- script for counter -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const section_observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        // If the section is visible in the browser window
+                        if (entry.isIntersecting) {
+                            startCounters();
+                            // Disconnect after it runs once so it doesn't repeat on every scroll
+                            section_observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 }); // 0.5 means it starts when 50% of the section is visible
+
+                // Point the observer to statistics section
+                const targetSection = document.querySelector('#statistics');
+                if (targetSection) section_observer.observe(targetSection);
+
+                function startCounters() {
+                    const counters = document.querySelectorAll('.counter');
+
+                    counters.forEach(counter => {
+                        const target = parseFloat(counter.getAttribute('data-target'));
+                        const isDecimal = counter.classList.contains('decimal-counter');
+                        const duration = 2000;
+                        const frameRate = 1000 / 60;
+                        const totalFrames = Math.round(duration / frameRate);
+
+                        let currentFrame = 0;
+
+                        const animate = () => {
+                            currentFrame++;
+                            const progress = currentFrame / totalFrames;
+                            const easeProgress = 1 - Math.pow(1 - progress, 3);
+                            const currentValue = target * easeProgress;
+
+                            if (isDecimal) {
+                                counter.innerText = currentValue.toFixed(1);
+                            } else {
+                                counter.innerText = Math.floor(currentValue);
+                            }
+
+                            if (currentFrame < totalFrames) {
+                                requestAnimationFrame(animate);
+                            } else {
+                                counter.innerText = isDecimal ? target.toFixed(1) : target;
+                            }
+                        };
+                        animate();
+                    });
+                }
             });
         </script>
 
